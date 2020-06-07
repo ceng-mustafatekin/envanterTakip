@@ -1,0 +1,67 @@
+﻿@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>sidepanelBASLIKKK</title>
+    <!-- Bootstrap core CSS -->
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/Content/simple-sidebar.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">envanter sidepanel </div>
+            <div class="list-group list-group-flush">
+                <a href="~/Users/Index" class="list-group-item list-group-item-action bg-light">Kullanıcılar</a>
+                <a href="~/Roles/Index" class="list-group-item list-group-item-action bg-light">Roller</a>
+                <a href="~/Roles/Index" class="list-group-item list-group-item-action bg-light">Kategoriler</a>
+
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+
+                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+                <div style="margin-left:5%">
+                    Hoşgeldin @Session["name"] @Html.ActionLink("Logout", "Logout", "Auth")
+                </div>
+
+
+            </nav>
+
+            <div class="container-fluid">
+                @RenderBody();
+            </div>
+
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Scripts/jquery/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+</html>

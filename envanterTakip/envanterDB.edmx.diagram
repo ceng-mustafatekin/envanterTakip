@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="19ebfe95ac5c463fb4c7b318e1547ad7" Name="Diagram1" ZoomLevel="83">
+        <EntityTypeShape EntityType="envanterDBModel.category" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="envanterDBModel.role" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="envanterDBModel.user" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="envanterDBModel.FK__users__userRoleI__286302EC" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="envanterDBModel.PIDetail" Width="1.5" PointX="10.5" PointY="5.125" />
+        <EntityTypeShape EntityType="envanterDBModel.product" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="envanterDBModel.purchaseInvoice" Width="1.5" PointX="5.625" PointY="5" />
+        <EntityTypeShape EntityType="envanterDBModel.supplier" Width="1.5" PointX="3.375" PointY="4.875" />
+        <AssociationConnector Association="envanterDBModel.FK__PIDetails__pid_p__5165187F" />
+        <AssociationConnector Association="envanterDBModel.FK__purchaseI__pi_su__4E88ABD4" />
+        <EntityTypeShape EntityType="envanterDBModel.PIDetailss" Width="1.5" PointX="9.875" PointY="2" />
+        <AssociationConnector Association="envanterDBModel.FK__PIDetails__pid_p__5CD6CB2B" />
+        <AssociationConnector Association="envanterDBModel.FK__PIDetails__pid_p__5DCAEF64" />
+        <EntityTypeShape EntityType="envanterDBModel.Stock" Width="1.5" PointX="7.875" PointY="4.875" />
+        <AssociationConnector Association="envanterDBModel.FK__Stock__st_proID__02FC7413" />
+        <AssociationConnector Association="envanterDBModel.FK__Stock__st_purcha__03F0984C" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,73 @@
+﻿KGJHFHZ
+@model IEnumerable<envanterTakip.user>
+
+@{
+    ViewBag.Title = "Index";
+   
+}
+
+<h2>Kullanıcı Yönetim Sayfası</h2>
+
+<p>
+    @Html.ActionLink("Yeni Kullanıcı Oluştur", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.userName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user_userName)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.userPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.userStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.role.roleName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.userName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user_userName)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.userPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userEmail)
+            </td>
+            <td>
+                @{ if (item.userStatus == Convert.ToByte(1))
+                    { <p>Aktif</p>}
+                    else if (item.userStatus == Convert.ToByte(0))
+                    { <p>Pasif</p>}
+                }
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.role.roleName)
+            </td>
+            <td>
+                @Html.ActionLink("Güncelle", "Edit", new { id = item.userId }) |
+                
+                @Html.ActionLink("Sil", "Delete", new { id = item.userId })
+            </td>
+        </tr>
+    }
+
+</table>

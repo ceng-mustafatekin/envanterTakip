@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="envanterDBModelStoreContainer" CdmEntityContainer="envanterDBEntities">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="envanterDBModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="catId" ColumnName="catId" />
+          <ScalarProperty Name="catName" ColumnName="catName" />
+          <ScalarProperty Name="catStatus" ColumnName="catStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="envanterDBModel.role">
+        <MappingFragment StoreEntitySet="roles">
+          <ScalarProperty Name="roleId" ColumnName="roleId" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+          <ScalarProperty Name="roleStatus" ColumnName="roleStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="envanterDBModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="user_userName" ColumnName="user_userName" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+          <ScalarProperty Name="userPhone" ColumnName="userPhone" />
+          <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+          <ScalarProperty Name="userStatus" ColumnName="userStatus" />
+          <ScalarProperty Name="userRoleId" ColumnName="userRoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_getLoginDetails" FunctionName="envanterDBModel.Store.SP_getLoginDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="envanterDBModel.SP_getLoginDetails_Result">
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_getAllUser" FunctionName="envanterDBModel.Store.SP_getAllUser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="envanterDBModel.SP_getAllUser_Result">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="user_userName" ColumnName="user_userName" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+          <ScalarProperty Name="userPhone" ColumnName="userPhone" />
+          <ScalarProperty Name="userEmail" ColumnName="userEmail" />
+          <ScalarProperty Name="userStatus" ColumnName="userStatus" />
+          <ScalarProperty Name="userRoleId" ColumnName="userRoleId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="PIDetails">
+      <EntityTypeMapping TypeName="envanterDBModel.PIDetail">
+        <MappingFragment StoreEntitySet="PIDetails">
+          <ScalarProperty Name="pid_proID" ColumnName="pid_proID" />
+          <ScalarProperty Name="pid_purchaseID" ColumnName="pid_purchaseID" />
+          <ScalarProperty Name="pid_id" ColumnName="pid_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="envanterDBModel.product">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="pro_sellingPrice" ColumnName="pro_sellingPrice" />
+          <ScalarProperty Name="pro_buyingPrice" ColumnName="pro_buyingPrice" />
+          <ScalarProperty Name="pro_expiryDate" ColumnName="pro_expiryDate" />
+          <ScalarProperty Name="pro_code" ColumnName="pro_code" />
+          <ScalarProperty Name="pro_name" ColumnName="pro_name" />
+          <ScalarProperty Name="pro_id" ColumnName="pro_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="purchaseInvoices">
+      <EntityTypeMapping TypeName="envanterDBModel.purchaseInvoice">
+        <MappingFragment StoreEntitySet="purchaseInvoice">
+          <ScalarProperty Name="pi_suppID" ColumnName="pi_suppID" />
+          <ScalarProperty Name="pi_date" ColumnName="pi_date" />
+          <ScalarProperty Name="pi_id" ColumnName="pi_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="suppliers">
+      <EntityTypeMapping TypeName="envanterDBModel.supplier">
+        <MappingFragment StoreEntitySet="suppliers">
+          <ScalarProperty Name="sup_openingBalance" ColumnName="sup_openingBalance" />
+          <ScalarProperty Name="sup_phone" ColumnName="sup_phone" />
+          <ScalarProperty Name="sup_address" ColumnName="sup_address" />
+          <ScalarProperty Name="sup_name" ColumnName="sup_name" />
+          <ScalarProperty Name="sup_id" ColumnName="sup_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PIDetailsses">
+      <EntityTypeMapping TypeName="envanterDBModel.PIDetailss">
+        <MappingFragment StoreEntitySet="PIDetailss">
+          <ScalarProperty Name="pid_proID" ColumnName="pid_proID" />
+          <ScalarProperty Name="pid_purchaseID" ColumnName="pid_purchaseID" />
+          <ScalarProperty Name="pid_id" ColumnName="pid_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stocks">
+      <EntityTypeMapping TypeName="envanterDBModel.Stock">
+        <MappingFragment StoreEntitySet="Stock">
+          <ScalarProperty Name="st_purchaseInvID" ColumnName="st_purchaseInvID" />
+          <ScalarProperty Name="st_proPieces" ColumnName="st_proPieces" />
+          <ScalarProperty Name="st_proCarton" ColumnName="st_proCarton" />
+          <ScalarProperty Name="st_proID" ColumnName="st_proID" />
+          <ScalarProperty Name="st_id" ColumnName="st_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

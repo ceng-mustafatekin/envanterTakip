@@ -1,0 +1,35 @@
+﻿@model envanterTakip.role
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>role</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.roleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.roleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.roleStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.roleStatus)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.roleId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

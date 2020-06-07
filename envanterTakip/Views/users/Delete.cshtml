@@ -1,0 +1,81 @@
+﻿@model envanterTakip.user
+
+@{
+    ViewBag.Title = "Delete";
+   
+}
+
+<h2>Sil</h2>
+
+<h3> @Html.DisplayFor(model => model.userName) Emin misiniz?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_userName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_userName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.userStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.userStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.role.roleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.role.roleName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

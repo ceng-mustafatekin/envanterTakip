@@ -1,0 +1,39 @@
+﻿@model IEnumerable<envanterTakip.category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.catName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.catStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.catName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.catStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.catId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.catId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.catId })
+        </td>
+    </tr>
+}
+
+</table>

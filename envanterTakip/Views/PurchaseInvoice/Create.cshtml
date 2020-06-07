@@ -1,0 +1,71 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/TableJS.js"></script>
+<link rel="stylesheet" href="~/Content/Site.css" />
+
+<h2>Satın Alma Fatura Kayıt</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Tarih")
+    <input type="date" id="datePicker" name="dataPicker" /><br />
+    @Html.Label("Tedarikçi")<br />
+    @Html.DropDownList("Supplier", ViewBag.suppList as SelectList)<br /><br />
+    <table>
+        <tr>
+            <th>
+                Ürün
+            </th>
+            <th>
+                Barkod
+            </th>
+            <th>
+                Son Kullanma Tarihi
+            </th>
+            <th>
+                Karton sayısı
+            </th>
+            <th>
+                Kartondaki Ürün Sayısı
+            </th>
+            <th>
+                Fiyat
+            </th>
+        </tr>
+        <tr>
+
+
+            <td>@Html.Editor("ProductName")</td>
+            <td> @Html.Editor("ProductBarcode")</td>
+            <td><input type="date" id="exdatePicker" name="exdatePicker" /></td>
+            <td> @Html.Editor("CartonTxt")</td>
+            <td>@Html.Editor("PieceTxt")</td>
+            <td>@Html.Editor("BuyingTxt")</td>
+            <td>
+                <input type="button" value="Ekle" class="click" />
+            </td>
+        </tr>
+    </table>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>ÜRÜN</th>
+                <th>BARKOD</th>
+                <th>SON KULLANMA TARİHİ</th>
+                <th>KARTON SAYISI</th>
+                <th>KARTONDAKİ ÜRÜN</th>
+                <th>SATIN ALMA FİYATI</th>
+            </tr>
+        </thead>
+        <tbody class="tbody"></tbody>
+
+    </table>
+
+    <input type="button" class="del" value="Sil" />
+
+}
